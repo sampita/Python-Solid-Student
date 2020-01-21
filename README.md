@@ -1,4 +1,4 @@
-#Practice: Solid Student
+# Practice: Solid Student
 
 Define a Python class named Student. This class will have 5 properties.
 
