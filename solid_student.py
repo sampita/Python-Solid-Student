@@ -31,7 +31,7 @@ class Student:
     @property #getter
     def age(self):
         try:
-            return self.__age_name
+            return self.__age
         except AttributeError:
             return "There is no age listed"
     
@@ -62,6 +62,9 @@ class Student:
             return f"{self.__first_name} {self.__last_name}"
         except AttributeError:
             return "There is no full name listed"
+        
+    def __str__(self):
+        return f"{self.full_name} is {self.age} years old and is in cohort {self.cohort}."
 
 # Testing try/excepts:
 student_one = Student()
@@ -70,4 +73,4 @@ student_one.first_name = "Rosie"
 student_one.last_name = "Pita"
 student_one.age = 2
 student_one.cohort = 36
-print(student_one.full_name)
+print(student_one)
